@@ -1,6 +1,6 @@
 # Hilt UI test library bug on multiple tests
 
-Building `:uitest` fails due to
+Building `:uitest` that contains multiple UI tests with Hilt versions (`2.40` ->) fails due to
 
 ```
 > Task :uitest:hiltAggregateDepsDebug FAILED
