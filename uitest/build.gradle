@@ -45,9 +45,8 @@ dependencies {
     implementation 'androidx.test:runner:1.4.0'
     implementation 'androidx.test:rules:1.4.0'
     implementation 'androidx.test.ext:junit-ktx:1.1.3'
-    implementation "androidx.activity:activity-ktx:1.4.0"
-    implementation "androidx.fragment:fragment-ktx:1.4.1"
-    debugImplementation ("androidx.fragment:fragment-testing:1.4.1") {
+
+    debugImplementation ("androidx.fragment:fragment-testing:1.5.0") {
         exclude group: 'androidx.test', module: 'core'
     }
 
@@ -55,4 +54,9 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     implementation "com.google.dagger:hilt-android-testing:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+}
+
+hilt {
+    // true fails, false builds
+    enableAggregatingTask = true
 }
